@@ -1,18 +1,30 @@
+@font-face{
+	font-family: 'Dancing Script';
+	src: url('DancingScript-Regular.ttf');
+}
 *{
 	margin: 0;
 	box-sizing: border-box; 
 }
 
+body{
+	background-color:  #02010a;
+	font-family: 'Dancing Script', cursive;	
+}
+
 header{
 	background-color: #5b7989;
-	border-radius: 10px;
-	width: 100%;
+	border-radius: 10px 10px 0 0;
+	width: 100%;	
+	display: flex;
+	flex-direction: column;
 }
 
 header h1{
 	color: white;
 	text-align: left;
 	text-shadow: 0 0 10px #02010a;
+	line-height: center;
 }
 
 nav a{
@@ -46,12 +58,10 @@ nav {
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	
 }
 
 #sect2 img{
 	border: 1px solid black;
 	height: 80%;
 	margin: 0 auto;
-	
 }
