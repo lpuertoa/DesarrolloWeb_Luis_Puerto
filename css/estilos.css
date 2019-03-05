@@ -1,10 +1,7 @@
+/* ASPECTOS GENERALES */
 @font-face{
 	font-family: 'Dancing Script';
 	src: url('DancingScript-Regular.ttf');
-}
-*{
-	margin: 0;
-	box-sizing: border-box; 
 }
 
 body{
@@ -16,35 +13,50 @@ img{
 	box-shadow: 2px 2px 2px 2px #02010a;
 }
 
-header{
+.contenido{
+    width: 900px;
+    margin: 0 auto;
+}
+
+*{
+	margin: 0;
+	box-sizing: border-box; 
+}
+
+.header{
 	background-color: #5b7989;
 	border-radius: 10px 10px 0 0;
 	width: 100%;
-        height: 10vh;	
+        min-height: 10vh;	
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+	flex-flow: row wrap;
 }
 
-header h1{
+.titulo{
 	color: white;
 	text-shadow: 0 0 2px #02010a;
 	width: 50%;
-	padding: 0 2vw;
+       	padding-left: 2vw;
+        margin: auto 0;
 }
 
-header nav {
+.barra {
     width: 50%;
-	text-align: right;
+    text-align: right;
+    margin: auto;
+    padding-right: 2vw;
 }
 
 nav a{
-	text-decoration: none;
 	color: white;	
 	padding: 1vw;
 }
 
-#sect1{
+.actual{
+	text-decoration: none;
+}
+
+.sect1{
 	background-color: #82c3a6;
 	height: 400px;
 	display: flex;
@@ -52,57 +64,161 @@ nav a{
 	align-items: center;
 }
 
-#sect1 img{
+.sect1 img{
 	border: 1px solid black;
-	height: 90%;
+	height: 85%;
+        width: 90%;
 }
 
-#sect2{
-	background-color: #d5c75f;
-	border: 1px;
-	width: 100%;
-	height: 400px;
+.sect2{
 	display: flex;
-	align-items: center;
+        flex-flow: column wrap;
+        align-items: center;
+        background-color: #d5c75f;
+        height: 300px;
+        border: 1px;
+	width: 100%;
 }	
 
-#paisajes{
-	width: 50%;
-	
+.paisajes{
+	width: 49%;
+        margin: auto;
 }
 
-#retratos{
-	width: 50%;
+.retratos{
+	width: 49%;
+        margin: auto;
 }
 
-#paisajes img{
+.paisajes img{
 	width: 90%;
-	margin-left: 30px;
+	margin-left: 20px;
 	transition: 1s;
 }
 
-#retratos img{
+.retratos img{
 	width: 90%;
-	margin-left: 30px;
+	margin-left: 20px;
 	transition: 1s;
 }
 
-#paisajes img:hover{
-	transition: 1s; 
+.paisajes img:hover{
+	transition: 1s;  
 	transform: rotate(10deg);
 	box-shadow: 2px 2px 2px 2px #82c3a6;
 }
 
-#retratos img:hover{
+.retratos img:hover{
 	transition: 1s;
 	transform: translate(20px,-5px);
-	 box-shadow: 2px 2px 2px 2px #82c3a6;	
+        box-shadow: 2px 2px 2px 2px #82c3a6;	
 }
 
-footer{
+figcaption{    
+    padding-top: 5px; 
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.footer{
     border-radius: 0 0 10px 10px;
     background-color: #C6d5c5;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    min-height: 130px;
 }
+
+li{
+    padding-top: 12px;
+    list-style: none;
+    margin: 0px;
+    font-size: 18px;
+}
+li img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*mobiles*/
+@media all and (max-width: 900px){
+    
+   .contenido{
+    width: 100%;
+    }
+    
+    .header{
+        display: flex;
+	flex-direction: row;
+        width: 100%;
+    }
+    
+    .titulo{
+	width: 100%;
+        text-align: center;
+    }
+    
+    .titulo h1{
+      font-size: 3em;
+    } 
+    
+    .barra{
+        width: 100%;
+        text-align: center;
+    }
+    
+    .sect2{
+	display: flex;
+        flex-flow: row wrap;
+        height: 650px;
+     }   
+    .paisajes{
+	width: 100%;
+    }
+
+    .retratos{
+	width: 100%;
+    }
+    
+    .paisajes img{
+	width: 90%;
+	
+     }
+
+    .retratos img{
+	width: 90%;
+    }
+    
+    .contactos{
+        margin: 50px;
+        width: 100%;
+    }
+    
+    .terminos{
+        margin: 50px;
+        width: 100%;
+    }
+    
+    .redes{
+         margin: 50px;
+         width: 100%;
+    }
+    
+    .derechos{
+        margin: 50px;
+         width: 100%;
+    }
+     
+  
+}
+
+
+/*desktop*/
