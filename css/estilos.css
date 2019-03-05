@@ -23,13 +23,16 @@ img{
 	box-sizing: border-box; 
 }
 
+        /* HEADER - ENCABEZADO */
+        
 .header{
 	background-color: #5b7989;
 	border-radius: 10px 10px 0 0;
 	width: 100%;
-        min-height: 10vh;	
+        height: 15vh;	
 	display: flex;
 	flex-flow: row wrap;
+        animation: slide 2s;
 }
 
 .titulo{
@@ -47,15 +50,18 @@ img{
     padding-right: 2vw;
 }
 
-nav a{
+.barra a{
 	color: white;	
 	padding: 1vw;
+        font-size: 26px;
 }
 
 .actual{
 	text-decoration: none;
 }
 
+   /* SECTION - CUERPO */
+   
 .sect1{
 	background-color: #82c3a6;
 	height: 400px;
@@ -122,14 +128,13 @@ figcaption{
     font-size: 20px;
 }
 
-
+     /* FOOTER  */
 .footer{
     border-radius: 0 0 10px 10px;
     background-color: #C6d5c5;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    min-height: 130px;
 }
 
 li{
@@ -138,87 +143,168 @@ li{
     margin: 0px;
     font-size: 18px;
 }
+
 li img{
     width: 20px;
     margin-right: 10px;
 }
 
 ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
-/*mobiles*/
+      /*PAISAJES Y RETRATOS HTML*/
+.galeria{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 62vh;
+    background-color: #d5c75f;
+}
+
+.galeria figure{
+  width: 30%;
+  margin: auto;
+  height: 40%;
+}
+
+.galeria img{
+  width: 100%;
+  height: 98%;
+}
+
+.galeria figure:first-child{
+   filter: blur(6px);
+}
+
+.galeria figure:nth-child(even){
+ 	
+   -webkit-filter: grayscale(100%);
+   -moz-filter: grayscale(100%);
+   -ms-filter: grayscale(100%);
+   -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.galeria figure:nth-child(3){
+    
+    filter: sepia (80%);
+    -webkit-filter: sepia(80%);
+    -moz-filter: sepia(80%);
+}
+
+@keyframes slide {
+	0%{
+            margin-top: 150%;
+        }
+	60%{
+            margin-top: -5%;
+        }
+	100%{
+            margin-top: 0%;
+        }
+}
+
+          /*mobiles*/
+
 @media all and (max-width: 900px){
     
    .contenido{
-    width: 100%;
-    }
-    
-    .header{
-        display: flex;
-	flex-direction: row;
         width: 100%;
     }
-    
+
     .titulo{
 	width: 100%;
         text-align: center;
+        font-size: 1.8em;
     }
     
-    .titulo h1{
-      font-size: 3em;
-    } 
-    
+    .header{
+        min-height: 45vh;
+    }
+        
     .barra{
-        width: 100%;
-        text-align: center;
+        width: 100%;  
+        margin-top: 0;
+    }
+    
+    .barra a{
+        margin-right: 15vw;
     }
     
     .sect2{
-	display: flex;
-        flex-flow: row wrap;
-        height: 650px;
+	min-height: 1200px;
      }   
-    .paisajes{
+     
+    .paisajes, .retratos{
 	width: 100%;
-    }
-
-    .retratos{
-	width: 100%;
+        margin-left: 20px;
     }
     
-    .paisajes img{
-	width: 90%;
-	
+    .paisajes img, .retratos img{
+	width: 88%;
+        height: 90%;
      }
 
-    .retratos img{
-	width: 90%;
-    }
-    
-    .contactos{
-        margin: 50px;
+    .footer>div{
+        margin: 5vh 7vw;
         width: 100%;
     }
     
-    .terminos{
-        margin: 50px;
-        width: 100%;
-    }
+    /* PAISAJES Y RETRATOS */
     
-    .redes{
-         margin: 50px;
-         width: 100%;
+    .galeria{
+        flex-flow: column wrap;
+        min-height: 1500px;
+        align-items: center;
     }
-    
-    .derechos{
-        margin: 50px;
-         width: 100%;
+
+    .galeria figure{
+        width: 70%;
+        height: 13%;
     }
-     
-  
+
+    .galeria img{
+        margin: auto 0;
+    }
 }
 
+@media all and (max-width: 830px){
+     .sect2{
+        min-height: 1100px;
+     }
+     
+     .paisajes, .retratos{
+        margin-left: 2px;
+     }
+}
 
-/*desktop*/
+@media all and (max-width: 750px){
+
+    .sect2{
+      min-height: 1000px;
+     }
+}
+
+@media all and (max-width: 650px){
+
+    .sect2{
+      min-height: 800px;
+     }
+}
+
+@media all and (max-width: 500px){
+    
+    .sect2{
+      min-height: 600px;
+     }
+}
+     
+@media all and (max-width: 325px){
+    
+    .sect2{
+      min-height: 450px;
+     }
+     
+}
